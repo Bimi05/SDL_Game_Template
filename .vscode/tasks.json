@@ -1,0 +1,91 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Compile - Debug",
+			"command": "C:\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-c",
+				"src/*.cpp",
+				"-g",
+				"-Wall",
+				"-m64",
+				"-I",
+				"include",
+				"-I",
+				"C:\\SDL2-w64\\include"
+			],
+			"problemMatcher": "$gcc"
+		},
+		{
+			"label": "Output - Debug",
+			"command": "C:\\mingw64\\bin\\g++.exe",
+			"args": [
+				"*.o",
+				"-o",
+				"bin/debug/main",
+				"-L",
+				"C:\\SDL2-w64\\lib",
+				"-lmingw32",
+				"-lSDL2main",
+				"-lSDL2",
+				"-lSDL2_image",
+				"-lSDL2_mixer",
+				"-lSDL2_ttf"
+			],
+			"problemMatcher": "$gcc"
+		},
+		{
+			"type": "shell",
+			"label": "Build (Debug)",
+			"command": "start bin/debug/main",
+			"dependsOrder": "sequence",
+			"dependsOn": ["Compile - Debug", "Output - Debug"],
+			"group": "build"
+		},
+
+		{
+			"label": "Compile - Release",
+			"command": "C:\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-c",
+				"src/*.cpp",
+				"-O3",
+				"-Wall",
+				"-m64",
+				"-I",
+				"include",
+				"-I",
+				"C:\\SDL2-w64\\include"
+			],
+			"problemMatcher": "$gcc"
+		},
+		{
+			"label": "Output - Release",
+			"command": "C:\\mingw64\\bin\\g++.exe",
+			"args": [
+				"*.o",
+				"-o",
+				"bin/release/main",
+				"-s",
+				"-L",
+				"C:\\SDL2-w64\\lib",
+				"-lmingw32",
+				"-lSDL2main",
+				"-lSDL2",
+				"-lSDL2_image",
+				"-lSDL2_mixer",
+				"-lSDL2_ttf"
+			],
+			"problemMatcher": "$gcc"
+		},
+		{
+			"type": "shell",
+			"label": "Build (Release)",
+			"command": "start bin/release/main",
+			"dependsOrder": "sequence",
+			"dependsOn": ["Compile - Release", "Output - Release"],
+			"group": "build"
+		},
+	]
+}
