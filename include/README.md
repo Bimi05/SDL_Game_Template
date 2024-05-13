@@ -1,0 +1,1 @@
+### All header (`.h`) files for the project should go in this directory.

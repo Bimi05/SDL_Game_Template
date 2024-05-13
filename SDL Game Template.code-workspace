@@ -1,0 +1,20 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "name": "SDL Game Template"
+        }
+    ],
+    "settings": {
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 100,
+        "editor.tabSize": 2
+    },
+    "extensions": {
+        "recommendations": [
+            "usernamehw.errorlens",
+            "aaron-bond.better-comments",
+            "ms-vscode.cpptools-extension-pack"
+        ]
+    }
+}

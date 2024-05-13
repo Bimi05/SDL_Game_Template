@@ -1,0 +1,1 @@
+### Place all your assets (sprites, backgrounds, textures, etc.) in here.
